@@ -70,7 +70,8 @@ const handleGetAnimalsSubmit = event => {
     personalityTraitArr.push(selectedTraits[i].value);
   }
 
-  const personalityTraits = personalityTraitArr.join(',');
+  //const personalityTraits = personalityTraitArr.join(',');
+  const personalityTraits = personalityTraitArr.join('&personalityTraits=');
 
   const animalObject = { diet, personalityTraits };
 

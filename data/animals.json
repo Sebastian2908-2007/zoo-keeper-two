@@ -200,6 +200,25 @@
         "anxious"
       ],
       "id": "20"
+    },
+    {
+      "name": "gooselyye",
+      "species": "water fowl",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "21"
+    },
+    {
+      "name": "smeagle",
+      "species": "eagle",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany"
+      ],
+      "id": "22"
     }
   ]
 }
