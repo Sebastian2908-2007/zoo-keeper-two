@@ -7,10 +7,12 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 // parse incoming JSON data
 app.use(express.json());
+// serve our css, javaScript and other static assets
+app.use(express.static('public'));
 
 const {animals} = require('./data/animals.json');
 
-// this function is called in the get requ;est /api/animals it gets animals by a query
+// this function is called in the get request /api/animals it gets animals by a query or all animals
 function filterByyQuery(query,animalsArray) {
     let personalityTraitsArray = [];
     let filteredResults = animalsArray;
@@ -81,7 +83,7 @@ function validateAnimal(animal) {
    return true;
 };
 
-
+// route for getting all animals or getting them by specific query
 app.get('/api/animals', (req,res) => {
     let results = animals;
     if(req.query) {
@@ -90,6 +92,7 @@ app.get('/api/animals', (req,res) => {
  res.json(results);
 });
 
+// route for getting animals by their id
 app.get('/api/animals/:id', (req,res) => {
     const result = findById(req.params.id, animals);
     if (result) {
@@ -99,6 +102,7 @@ app.get('/api/animals/:id', (req,res) => {
     }
 });
 
+// route for posting animals
 app.post('/api/animals',(req,res) => {
  // set id based on what the next index of the array wilol be
  req.body.id = animals.length.toString();
@@ -112,6 +116,26 @@ app.post('/api/animals',(req,res) => {
 
  res.json(animal);
  }
+});
+
+// serves index html to the root path of our server
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+// serves animals.html 
+app.get('/animals',(req,res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+// serves zookeper.html
+app.get('/zookeepers', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+// wild card route for non existent requests"this type route should always be last
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.listen(PORT, () => {

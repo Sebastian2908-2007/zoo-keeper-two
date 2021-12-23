@@ -144,6 +144,62 @@
         "hungry"
       ],
       "id": "14"
+    },
+    {
+      "name": "black bear",
+      "species": "bear",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "duck",
+      "species": "bird",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "16"
+    },
+    {
+      "name": "red tail hawk",
+      "species": "bird",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "anxious"
+      ],
+      "id": "17"
+    },
+    {
+      "name": "ostrich",
+      "species": "bird",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "18"
+    },
+    {
+      "name": "camel",
+      "species": "Camelidae",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "19"
+    },
+    {
+      "name": "wolf",
+      "species": "canine",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "anxious"
+      ],
+      "id": "20"
     }
   ]
 }
