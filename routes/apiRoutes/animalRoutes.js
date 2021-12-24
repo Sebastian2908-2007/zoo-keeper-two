@@ -24,7 +24,7 @@ router.get('/animals/:id', (req,res) => {
 
 // route for posting animals
 router.post('/animals',(req,res) => {
- // set id based on what the next index of the array wilol be
+ // set id based on array length
  req.body.id = animals.length.toString();
 
  // if any data in the req.body is incorrect ,send a 400 errror back

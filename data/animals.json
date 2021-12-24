@@ -219,6 +219,16 @@
         "zany"
       ],
       "id": "22"
+    },
+    {
+      "name": "eagalsa",
+      "species": "bald eagle",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany"
+      ],
+      "id": "23"
     }
   ]
 }
